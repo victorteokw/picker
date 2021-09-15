@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          '@react-native-picker/picker': './js',
+          'modified-picker': './js',
         },
         cwd: 'babelrc',
       },
