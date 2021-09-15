@@ -85,7 +85,8 @@ numberOfRowsInComponent:(__unused NSInteger)component
     NSParagraphStyle *paragraphStyle = [mutableParagraphStyle copy];
     return [[NSAttributedString alloc] initWithString:text attributes:@{
         NSFontAttributeName: _font,
-        NSForegroundColorAttributeName: [RCTConvert UIColor:_items[row][@"textColor"]] ?: _color,
+        NSForegroundColorAttributeName: [UIColor redColor],
+//        NSForegroundColorAttributeName: [RCTConvert UIColor:_items[row][@"textColor"]] ?: _color,
         NSParagraphStyleAttributeName: paragraphStyle
     }];
 }
