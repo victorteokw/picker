@@ -5,7 +5,7 @@ module.exports = {
       'module-resolver',
       {
         alias: {
-          'modified-picker': './js',
+          'yet-yet-another-picker': './js',
         },
         cwd: 'babelrc',
       },

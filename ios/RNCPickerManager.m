@@ -18,7 +18,6 @@ RCT_EXPORT_MODULE()
 - (UIView *)view
 {
     RNCPicker *picker = [[RNCPicker alloc] init];
-    picker.delegate = self;
     return picker;
 }
 

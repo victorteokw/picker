@@ -1,10 +1,10 @@
 
-#  `modified-picker`
+#  `yet-yet-another-picker`
 
 
 
-[![npm version](https://img.shields.io/npm/v/modified-picker.svg)](https://www.npmjs.com/package/modified-picker)
-[![Build](https://github.com/react-native-picker/picker/workflows/Build/badge.svg)](https://github.com/react-native-picker/picker/actions) ![Supports Android, iOS, MacOS, and Windows](https://img.shields.io/badge/platforms-android%20|%20ios|%20macos|%20windows-lightgrey.svg) ![MIT License](https://img.shields.io/npm/l/modified-picker.svg) [![Lean Core Extracted](https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg)](https://github.com/facebook/react-native/issues/23313)
+[![npm version](https://img.shields.io/npm/v/yet-yet-another-picker.svg)](https://www.npmjs.com/package/yet-yet-another-picker)
+[![Build](https://github.com/react-native-picker/picker/workflows/Build/badge.svg)](https://github.com/react-native-picker/picker/actions) ![Supports Android, iOS, MacOS, and Windows](https://img.shields.io/badge/platforms-android%20|%20ios|%20macos|%20windows-lightgrey.svg) ![MIT License](https://img.shields.io/npm/l/yet-yet-another-picker.svg) [![Lean Core Extracted](https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg)](https://github.com/facebook/react-native/issues/23313)
 
 | Android | iOS | PickerIOS | Windows | MacOS |
 | --- | --- | --- | --- | --- |
@@ -12,7 +12,7 @@
 
 ## Supported Versions
 
-| modified-picker | react-native | react-native-windows |
+| yet-yet-another-picker | react-native | react-native-windows |
 | --- | --- | --- |
 | master | 0.61+ | 0.64+ |
 | >= 1.16.0 | 0.61+ | 0.61+ |
@@ -25,11 +25,11 @@ See more info [here](https://github.com/react-native-picker/picker/issues/45#iss
 
 ## Getting started
 
-`$ npm install modified-picker --save`
+`$ npm install yet-yet-another-picker --save`
 
 or
 
-`$ yarn add modified-picker`
+`$ yarn add yet-yet-another-picker`
 
 ### For React Native v0.60 and above (Autolinking)
 
@@ -84,7 +84,7 @@ pod install
 The following steps are only necessary if you are working with a version of React Native lower than 0.60
 ### Mostly automatic installation
 
-`$ react-native link modified-picker`
+`$ react-native link yet-yet-another-picker`
 
 ### Manual installation
 
@@ -92,7 +92,7 @@ The following steps are only necessary if you are working with a version of Reac
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ ` modified-picker` and add `RNCPicker.xcodeproj`
+2. Go to `node_modules` ➜ ` yet-yet-another-picker` and add `RNCPicker.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNCPicker.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -104,7 +104,7 @@ The following steps are only necessary if you are working with a version of Reac
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':@react-native-picker_picker'
-  	project(':@react-native-picker_picker').projectDir = new File(rootProject.projectDir, 	'../node_modules/modified-picker/android')
+  	project(':@react-native-picker_picker').projectDir = new File(rootProject.projectDir, 	'../node_modules/yet-yet-another-picker/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
@@ -113,17 +113,17 @@ The following steps are only necessary if you are working with a version of Reac
 #### MacOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ ` modified-picker` and add `RNCPicker.xcodeproj`
+2. Go to `node_modules` ➜ ` yet-yet-another-picker` and add `RNCPicker.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNCPicker.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 </details>
 
 ## Usage
 
-Import Picker from `modified-picker`:
+Import Picker from `yet-yet-another-picker`:
 
 ```javascript
-import {Picker} from 'modified-picker';
+import {Picker} from 'yet-yet-another-picker';
 ```
 
 Create state which will be used by the `Picker`:
