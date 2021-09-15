@@ -11,10 +11,6 @@
 #import <React/RCTBridge.h>
 #import <React/RCTFont.h>
 
-@interface RNCPickerManager () <UIPickerViewDelegate>
-
-@end
-
 @implementation RNCPickerManager
 
 RCT_EXPORT_MODULE()
@@ -46,14 +42,6 @@ RCT_CUSTOM_VIEW_PROPERTY(fontStyle, NSString, __unused RNCPicker)
 RCT_CUSTOM_VIEW_PROPERTY(fontFamily, NSString, RNCPicker)
 {
   view.font = [RCTFont updateFont:view.font withFamily:json ?: defaultView.font.familyName];
-}
-
-- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
-    return self.view.window.frame.size.width - 38;
-}
-
-- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
-    return 34;
 }
 
 @end

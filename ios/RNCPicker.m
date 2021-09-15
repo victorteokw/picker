@@ -70,34 +70,50 @@ numberOfRowsInComponent:(__unused NSInteger)component
   return [RCTConvert NSString:_items[row][@"label"]];
 }
 
-- (CGFloat)pickerView:(__unused UIPickerView *)pickerView rowHeightForComponent:(NSInteger)__unused component {
-  return _font.pointSize + 19;
+- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+    return self.window.frame.size.width - 38;
 }
 
-- (UIView *)pickerView:(UIPickerView *)pickerView
-            viewForRow:(NSInteger)row
-          forComponent:(NSInteger)component
-           reusingView:(UILabel *)label
-{
-  if (!label) {
-    label = [[UILabel alloc] initWithFrame:(CGRect){
-      CGPointZero,
-      {
-        [pickerView rowSizeForComponent:component].width,
-        [pickerView rowSizeForComponent:component].height,
-      }
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
+    return 34;
+}
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *text = [self pickerView:pickerView titleForRow:row forComponent:component];
+    NSMutableParagraphStyle *mutableParagraphStyle = [[NSMutableParagraphStyle alloc] init];
+    mutableParagraphStyle.alignment = NSTextAlignmentCenter;
+    NSParagraphStyle *paragraphStyle = [mutableParagraphStyle copy];
+    return [[NSAttributedString alloc] initWithString:text attributes:@{
+        NSFontAttributeName: _font,
+        NSForegroundColorAttributeName: [RCTConvert UIColor:_items[row][@"textColor"]] ?: _color,
+        NSParagraphStyleAttributeName: paragraphStyle
     }];
-  }
-
-  label.font = _font;
-
-  label.textColor = [RCTConvert UIColor:_items[row][@"textColor"]] ?: _color;
-
-  label.textAlignment = _textAlign;
-  label.text = [self pickerView:pickerView titleForRow:row forComponent:component];
-  label.accessibilityIdentifier = _items[row][@"testID"];
-  return label;
 }
+
+//- (UIView *)pickerView:(UIPickerView *)pickerView
+//            viewForRow:(NSInteger)row
+//          forComponent:(NSInteger)component
+//           reusingView:(UILabel *)label
+//{
+//  if (!label) {
+//    label = [[UILabel alloc] initWithFrame:(CGRect){
+//      CGPointZero,
+//      {
+//        [pickerView rowSizeForComponent:component].width,
+//        [pickerView rowSizeForComponent:component].height,
+//      }
+//    }];
+//  }
+//
+//  label.font = _font;
+//
+//  label.textColor = [RCTConvert UIColor:_items[row][@"textColor"]] ?: _color;
+//
+//  label.textAlignment = _textAlign;
+//  label.text = [self pickerView:pickerView titleForRow:row forComponent:component];
+//  label.accessibilityIdentifier = _items[row][@"testID"];
+//  return label;
+//}
 
 - (void)pickerView:(__unused UIPickerView *)pickerView
       didSelectRow:(NSInteger)row inComponent:(__unused NSInteger)component
